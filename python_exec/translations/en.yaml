@@ -1,0 +1,4 @@
+configuration:
+  code:
+    name: Code
+    description: Python source code
