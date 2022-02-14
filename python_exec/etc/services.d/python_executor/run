@@ -10,7 +10,7 @@
 declare message
 
 ## Get the 'message' key from the user config options.
-message=$(bashio::config 'code')
+code=$(bashio::config 'code')
 
 ## Print the message the user supplied, defaults to "Hello World..."
 bashio::log.info "${code:="Hello World..."}"
