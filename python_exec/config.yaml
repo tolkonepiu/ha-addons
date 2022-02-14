@@ -12,5 +12,6 @@ arch:
   - i386
 init: false
 schema:
-  code: "str"
+  code: str
+  requirements: str?
 image: "ghcr.io/tolkonepiu/{arch}-addon-python_executor"

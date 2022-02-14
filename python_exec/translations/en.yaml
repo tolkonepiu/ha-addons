@@ -2,3 +2,6 @@ configuration:
   code:
     name: Code
     description: Python source code
+  requirements:
+    name: Requirements
+    description: List of requirements to install with pip
