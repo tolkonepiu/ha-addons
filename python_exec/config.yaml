@@ -13,5 +13,6 @@ arch:
 init: false
 schema:
   code: str
-  requirements: str?
+  requirements:
+    - str?
 image: "ghcr.io/tolkonepiu/{arch}-addon-python_exec"

@@ -10,12 +10,12 @@ declare requirements
 code=$(bashio::config 'code')
 requirements=$(bashio::config 'requirements')
 
-bashio::log.info "${code}"
-
 PYTHON=$(which python3)
 
-virtualenv -p ${PYTHON} .
+bashio::log.info "Create venv"
+${PYTHON} -m venv .
 
+bashio::log.info "Enable venv"
 source bin/activate
 
 if [ -n "$requirements" ]; then
