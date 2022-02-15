@@ -11,8 +11,12 @@ arch:
   - amd64
   - i386
 init: false
+options:
+  code: |
+    print('Hello, world!')
+  requirements: []
 schema:
   code: str
   requirements:
-    - str?
+    - str
 image: "ghcr.io/tolkonepiu/{arch}-addon-python_exec"

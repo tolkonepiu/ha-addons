@@ -23,4 +23,6 @@ if [ -n "$requirements" ]; then
   pip install -U ${requirements}
 fi
 
-python3 ${code}
+python3 <<EOF
+${code}
+EOF
