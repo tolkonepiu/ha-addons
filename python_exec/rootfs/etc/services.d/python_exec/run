@@ -11,8 +11,6 @@ requirements=$(bashio::config 'requirements')
 
 bashio::log.info "${code}"
 
-bashio::log.info "${requirements}"
-
 PYTHON=$(which python3)
 
 virtualenv -p ${PYTHON} .
@@ -20,6 +18,7 @@ virtualenv -p ${PYTHON} .
 source bin/activate
 
 if [ -n "$requirements" ]; then
+  bashio::log.info "Install deps: ${requirements}"
   pip install -U ${requirements}
 fi
 
