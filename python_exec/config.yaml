@@ -1,0 +1,17 @@
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
+name: Python executor add-on
+version: "0.0.1"
+slug: python_exec
+description: Simple python executor for Home Assistant
+url: "https://github.com/tolkonepiu/ha-addons/tree/main/python_exec"
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+init: false
+schema:
+  code: str
+  requirements: str?
+image: "ghcr.io/tolkonepiu/{arch}-addon-python_exec"
