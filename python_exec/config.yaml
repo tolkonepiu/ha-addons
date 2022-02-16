@@ -26,6 +26,7 @@ devices:
   - /dev/spidev0.0
   - /dev/mem
 privileged:
+  - SYS_ADMIN
   - SYS_RAWIO
   - SYS_RESOURCE
   - SYS_MODULE
