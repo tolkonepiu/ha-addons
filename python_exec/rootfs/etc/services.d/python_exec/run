@@ -14,12 +14,10 @@ source bin/activate
 
 if bashio::config.has_value "requirements"; then
   bashio::log.info "Install requirements"
-  yes | pip install --disable-pip-version-check -q -U $(bashio::config 'requirements')
+  pip install --disable-pip-version-check -q -U $(bashio::config 'requirements')
 fi
 
 bashio::log.info "Run source code"
 python3 <<EOF
 $(bashio::config 'code')
 EOF
-
-bashio::exit.ok
