@@ -17,11 +17,18 @@ audio: true
 video: true
 gpio: true
 uart: true
+udev: true
 devices:
   - i2c-0
   - i2c-1
   - i2c-10
   - i2c-22
+  - /dev/spidev0.0
+  - /dev/mem
+privileged:
+  - SYS_RAWIO
+  - SYS_RESOURCE
+  - SYS_MODULE
 options:
   code: |
     print('Hello, world!')
