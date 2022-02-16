@@ -3,7 +3,7 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 # Install dependencies
-RUN apk add --no-cache build-base
+RUN apk add --no-cache build-base linux-headers
 
 
 # Execute during the build of the image
