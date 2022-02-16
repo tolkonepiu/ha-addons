@@ -6,24 +6,26 @@
 
 PYTHON=$(which python3)
 
-bashio::log.info "Create venv"
-${PYTHON} -m venv .
-
-bashio::log.info "Enable venv"
-source bin/activate
-
-if bashio::config.has_value "alpine_packages"; then
-  bashio::log.info "Install Alpine packages"
-  apk add -q --no-cache $(bashio::config 'alpine_packages')
+if bashio::config.has_value "preexec"; then
+  bashio::log.info "Run user pre-command..."
+  bash -c "$(bashio::config 'preexec')"
 fi
 
 if bashio::config.has_value "requirements"; then
-  bashio::log.info "Install Python requirements"
+  if [ ! -f "bin/activate" ]; then
+    bashio::log.info "Create venv..."
+    ${PYTHON} -m venv .
+  fi
+
+  bashio::log.info "Enable venv..."
+  source bin/activate
+
+  bashio::log.info "Install Python requirements..."
   pip install -q -U pip
   pip install -q -U $(bashio::config 'requirements')
 fi
 
-bashio::log.info "Run source code"
+bashio::log.info "Run source code..."
 python3 <<EOF
 $(bashio::config 'code')
 EOF
