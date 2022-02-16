@@ -13,11 +13,7 @@ arch:
   - i386
 boot: manual
 init: false
-gpio: true
-uart: true
-udev: true
-devices:
-  - i2c-1
+full_access: true
 options:
   code: |
     print('Hello, world!')
