@@ -12,8 +12,13 @@ ${PYTHON} -m venv .
 bashio::log.info "Enable venv"
 source bin/activate
 
+if bashio::config.has_value "alpine_packages"; then
+  bashio::log.info "Install Alpine packages"
+  apk add --no-cache $(bashio::config 'alpine_packages')
+fi
+
 if bashio::config.has_value "requirements"; then
-  bashio::log.info "Install requirements"
+  bashio::log.info "Install Python requirements"
   pip install --disable-pip-version-check -q -U $(bashio::config 'requirements')
 fi
 

@@ -5,3 +5,6 @@ configuration:
   requirements:
     name: Requirements
     description: List of requirements to install with pip
+  alpine_packages:
+    name: Alpine packages
+    description: List of Alpine packages to install

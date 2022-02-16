@@ -33,7 +33,10 @@ options:
   code: |
     print('Hello, world!')
   requirements: []
+  alpine_packages: []
 schema:
   code: str
   requirements:
+    - str
+  alpine_packages:
     - str
