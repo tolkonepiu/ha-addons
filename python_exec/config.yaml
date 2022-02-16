@@ -4,6 +4,7 @@ version: "0.0.1"
 slug: python_exec
 description: Simple python executor for Home Assistant
 url: "https://github.com/tolkonepiu/ha-addons/tree/main/python_exec"
+image: "ghcr.io/tolkonepiu/{arch}-addon-python_exec"
 arch:
   - armhf
   - armv7
@@ -11,6 +12,10 @@ arch:
   - amd64
   - i386
 init: false
+audio: true
+video: true
+gpio: true
+uart: true
 options:
   code: |
     print('Hello, world!')
@@ -19,4 +24,3 @@ schema:
   code: str
   requirements:
     - str
-image: "ghcr.io/tolkonepiu/{arch}-addon-python_exec"
