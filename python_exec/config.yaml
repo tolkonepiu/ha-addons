@@ -1,10 +1,11 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: Python executor add-on
-version: "0.0.1"
+version: "0.0.2"
 slug: python_exec
 description: Simple python executor for Home Assistant
 url: "https://github.com/tolkonepiu/ha-addons/tree/main/python_exec"
 image: "ghcr.io/tolkonepiu/{arch}-addon-python_exec"
+panel_icon: mdi:language-python
 arch:
   - armhf
   - armv7
@@ -13,7 +14,19 @@ arch:
   - i386
 boot: manual
 init: false
-full_access: true
+auth_api: true
+homeassistant_api: true
+hassio_api: true
+hassio_role: homeassistant
+privileged:
+  - SYS_RAWIO
+  - SYS_ADMIN
+gpio: true
+usb: true
+uart: true
+devices:
+  - /dev/mem
+  - /dev/i2c-1
 options:
   code: |
     print('Hello, world!')
