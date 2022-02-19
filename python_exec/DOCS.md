@@ -15,7 +15,7 @@ List of requirements to install with pip
 
 ### preexec (optional)
 
-Path to the python source file.
+A command that is executed before Python script execution
 
 ## Usage
 
