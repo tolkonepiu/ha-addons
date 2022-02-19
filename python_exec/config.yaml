@@ -25,8 +25,8 @@ gpio: true
 usb: true
 uart: true
 devices:
-  - /dev/mem:/dev/mem:rw
-  - /dev/i2c-1:/dev/i2c-1:rw
+  - /dev/mem
+  - /dev/i2c-1
 options:
   code: |
     print('Hello, world!')
