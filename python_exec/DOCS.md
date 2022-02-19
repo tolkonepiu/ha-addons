@@ -1,8 +1,7 @@
 # Home Assistant Add-on: Python executor add-on
 
-![Build Status](https://github.com/tolkonepiu/ha-addons/actions/workflows/builder.yaml/badge.svg?branch=main)
-
-This addon is mainly for development purpose. It will install, if needed, the given requirements with pip and then launch the python script.
+This addon is mainly for development purpose. It will install, if needed,
+the given requirements with pip and then launch the python script.
 
 ## Options
 
@@ -82,11 +81,3 @@ requirements:
   - luma.oled>=3.8.1
 preexec: apk add -q --no-cache build-base linux-headers zlib-dev jpeg-dev
 ```
-
-## CHANGELOG
-
-- [CHANGELOG](./CHANGELOG.md)
-
-## LICENSE
-
-- [Apache License 2.0](./../LICENSE)
