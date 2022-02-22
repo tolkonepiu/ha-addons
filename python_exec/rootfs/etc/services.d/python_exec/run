@@ -12,14 +12,6 @@ if bashio::config.has_value "preexec"; then
 fi
 
 if bashio::config.has_value "requirements"; then
-  if [ ! -f "bin/activate" ]; then
-    bashio::log.info "Create venv..."
-    ${PYTHON} -m venv .
-  fi
-
-  bashio::log.info "Enable venv..."
-  source bin/activate
-
   bashio::log.info "Install Python requirements..."
   pip install -q -U pip
   pip install -q -U $(bashio::config 'requirements')
