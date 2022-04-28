@@ -14,7 +14,7 @@ This repository contains the following add-ons
 ![Supports armv7 Architecture][armv7-shield]
 ![Supports i386 Architecture][i386-shield]
 
-_Example add-on to use as a blueprint for new add-ons._
+_This addon is mainly for development purpose. It will install, if needed, the given requirements with pip and then launch the python script._
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
