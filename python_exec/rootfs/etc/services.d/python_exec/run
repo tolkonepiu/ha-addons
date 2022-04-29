@@ -22,9 +22,7 @@ if bashio::config.has_value "requirements"; then
 
   bashio::log.info "Install Python requirements..."
   pip install -q -U pip
-
-  read -ra requirements <(bashio::config 'requirements')
-  pip install -q -U "${requirements[@]}"
+  pip install -q -U $(bashio::config 'requirements')
 fi
 
 bashio::log.info "Run source code..."
