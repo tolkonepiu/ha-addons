@@ -14,7 +14,7 @@
         "^(\\w)+\\/build\\.yaml$"
       ],
       "matchStrings": [
-        "(?<registryUrl>.+?)\\/(?<depName>.+?):(?<currentValue>v?.* ?)"
+        "ghcr.io\\/(?<depName>.+?):(?<currentValue>v?.* ?)"
       ],
       "datasourceTemplate": "docker"
     }
