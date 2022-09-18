@@ -8,5 +8,3 @@ labels:
   org.opencontainers.image.description: "An easy to set up and use SSH honeypot, a fake SSH server that lets anyone in and logs their activity"
   org.opencontainers.image.source: "https://github.com/tolkonepiu/ha-addons"
   org.opencontainers.image.licenses: "Apache License 2.0"
-args:
-  TEMPIO_VERSION: "2021.09.0"

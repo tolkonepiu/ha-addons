@@ -11,4 +11,5 @@ labels:
   org.opencontainers.image.source: "https://github.com/tolkonepiu/ha-addons"
   org.opencontainers.image.licenses: "Apache License 2.0"
 args:
+  # renovate: datasource=github-releases depName=tempio packageName=home-assistant/tempio
   TEMPIO_VERSION: "2021.09.0"

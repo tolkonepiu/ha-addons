@@ -6,5 +6,19 @@
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true
     }
+  ],
+  "regexManagers": [
+    {
+      "description": "Update addons versions",
+      "fileMatch": [
+        "^(\\w)+\\/config\\.yaml$",
+        "^(\\w)+\\/build\\.yaml$"
+      ],
+      "matchStrings": [
+        "(?<registryUrl>.+?)\\/(?<repo>.+?):(?<currentValue>v?.* ?)",
+        "version(:\\s|-)(?<currentValue>\\d+\\.\\d+(?:.*)?)"
+      ],
+      "datasourceTemplate": "docker"
+    }
   ]
 }
