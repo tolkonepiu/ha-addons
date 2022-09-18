@@ -9,14 +9,12 @@
   ],
   "regexManagers": [
     {
-      "description": "Update addons versions",
+      "description": "Update base image versions",
       "fileMatch": [
-        "^(\\w)+\\/config\\.yaml$",
         "^(\\w)+\\/build\\.yaml$"
       ],
       "matchStrings": [
-        "(?<registryUrl>.+?)\\/(?<depName>.+?):(?<currentValue>v?.* ?)",
-        "version(:\\s|-)(?<currentValue>\\d+\\.\\d+(?:.*)?)"
+        "(?<registryUrl>.+?)\\/(?<depName>.+?):(?<currentValue>v?.* ?)"
       ],
       "datasourceTemplate": "docker"
     }
