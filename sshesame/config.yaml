@@ -9,10 +9,7 @@ arch:
   - armv7
   - aarch64
   - amd64
-auth_api: false
-homeassistant_api: false
-hassio_api: false
 ports:
   "2022/tcp": 2022
-ports_description":
+ports_description:
   "2022/tcp": "Default sshesame port"
