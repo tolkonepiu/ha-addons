@@ -12,3 +12,7 @@ arch:
 auth_api: false
 homeassistant_api: false
 hassio_api: false
+ports:
+  "2022/tcp": 2022
+ports_description":
+  "2022/tcp": "Default sshesame port"
