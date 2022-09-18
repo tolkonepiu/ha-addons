@@ -1,6 +1,6 @@
 {
   "extends": ["config:base"],
-  "dependencyDashboard": false,
+  "dependencyDashboard": true,
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
@@ -9,14 +9,12 @@
   ],
   "regexManagers": [
     {
-      "description": "Update base image versions",
+      "description": "Update build image versions",
       "fileMatch": [
-        "^(\\w)+\\/config\\.yaml$",
         "^(\\w)+\\/build\\.yaml$"
       ],
       "matchStrings": [
-        "\"(?<depName>ghcr.io\\/.+?):(?<currentValue>v?.* ?)\"",
-        "version(:\\s|-)(?<currentValue>\\d+\\.\\d+(?:.*)?)"
+        "\"(?<depName>ghcr.io\\/.+?):(?<currentValue>v?.* ?)\""
       ],
       "datasourceTemplate": "docker"
     }
