@@ -15,7 +15,7 @@
         "^(\\w)+\\/build\\.yaml$"
       ],
       "matchStrings": [
-        "(?<registryUrl>.+?)\\/(?<repo>.+?):(?<currentValue>v?.* ?)",
+        "(?<registryUrl>.+?)\\/(?<depName>.+?):(?<currentValue>v?.* ?)",
         "version(:\\s|-)(?<currentValue>\\d+\\.\\d+(?:.*)?)"
       ],
       "datasourceTemplate": "docker"
