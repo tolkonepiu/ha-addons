@@ -1,0 +1,14 @@
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
+name: sshesame
+version: "0.0.25"
+slug: sshesame
+description: An easy to set up and use SSH honeypot, a fake SSH server that lets anyone in and logs their activity
+url: "https://github.com/tolkonepiu/ha-addons/tree/main/sshesame"
+image: "ghcr.io/tolkonepiu/{arch}-addon-sshesame"
+arch:
+  - armv7
+  - aarch64
+  - amd64
+auth_api: false
+homeassistant_api: false
+hassio_api: false
