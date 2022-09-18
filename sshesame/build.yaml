@@ -1,8 +1,8 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
 build_from:
-  aarch64: "ghcr.io/jaksi/sshesame:v0.0.25@sha256:d12e33b60a282f1ac142f1e1b685aa70ebcd0d7358d15dc349e30833fa0495dc"
-  amd64: "ghcr.io/jaksi/sshesame:v0.0.25@sha256:096f4bb3b78158b52623023d31b1f8c1375d2ca6273c6ee61d08473d7c8163cf"
-  armv7: "ghcr.io/jaksi/sshesame:v0.0.25@sha256:ef020c49e1aa394e26824d67cb352e0a36c4ec0bfe404ffd26cf74f8f8868def"
+  aarch64: "ghcr.io/jaksi/sshesame:v0.0.25"
+  amd64: "ghcr.io/jaksi/sshesame:v0.0.25"
+  armv7: "ghcr.io/jaksi/sshesame:v0.0.25"
 labels:
   org.opencontainers.image.title: "Home Assistant Add-on: sshesame add-on"
   org.opencontainers.image.description: "An easy to set up and use SSH honeypot, a fake SSH server that lets anyone in and logs their activity"
