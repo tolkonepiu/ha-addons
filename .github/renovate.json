@@ -11,10 +11,12 @@
     {
       "description": "Update base image versions",
       "fileMatch": [
+        "^(\\w)+\\/config\\.yaml$",
         "^(\\w)+\\/build\\.yaml$"
       ],
       "matchStrings": [
-        "(?<depName>ghcr.io\\/.+?):(?<currentValue>v?.* ?)"
+        "\"(?<depName>ghcr.io\\/.+?):(?<currentValue>v?.* ?)\"",
+        "version(:\\s|-)(?<currentValue>\\d+\\.\\d+(?:.*)?)"
       ],
       "datasourceTemplate": "docker"
     }
